@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,600&display=swap');
+
+
+.form_control {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+
+  }
+  
+  .form_control label {
+    margin-bottom: 0.6em;
+    font-weight: bold;
+  }
+  
+  .form_control input {
+    padding: 0.7em;
+    border-radius: 0;
+    border: none;
+    border-radius: 15px;
+    display: block;
+  }
+  
+  .form_control input::placeholder {
+    color: #333333;
+    opacity: 0.5;
+    font-family: 'Poppins', sans-serif;
+  }
