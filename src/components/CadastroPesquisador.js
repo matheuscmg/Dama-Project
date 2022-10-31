@@ -1,9 +1,9 @@
 import Input from "./Input"
-import styles from './CadastroEmpresa.module.css'
+import styles from './CadastroPesquisador.module.css'
 import { MdEmail, MdVpnKey,MdPhone,MdTextSnippet,MdPermIdentity } from "react-icons/md"
 import Logo from './img/Logo.png'
 
-function CadastroEmpresa() {
+function CadastroPesquisador() {
     return (
 
         <form >
@@ -22,7 +22,7 @@ function CadastroEmpresa() {
 
                 <div className={styles.login_container}>
                     <h1>Cadastra-se!</h1>
-                    <p>Você está cadastrando sua empresa!</p>
+                    <p>Você está cadastrando como Pesquisador!</p>
 
 
 
@@ -38,7 +38,7 @@ function CadastroEmpresa() {
                     <Input
                         type="text"
                         name="email"
-                        placeholder="Endereço de email*"
+                        placeholder="Endereço de Email*"
 
                     />
 
@@ -54,8 +54,8 @@ function CadastroEmpresa() {
                         <MdTextSnippet className={styles.icon_teste}/>
                     <Input
                         type="text"
-                        name="cnpj"
-                        placeholder="CNPJ*"
+                        name="CPF"
+                        placeholder="CPF*"
 
                     />
                     <MdPhone className={styles.icon_teste}/>
@@ -84,4 +84,4 @@ function CadastroEmpresa() {
 
     )
 }
-export default CadastroEmpresa
+export default CadastroPesquisador

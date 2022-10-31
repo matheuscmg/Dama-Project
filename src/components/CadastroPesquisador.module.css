@@ -53,15 +53,16 @@ h1 {
     background-color: transparent;
 }
 
-p { 
+p {
     color:#333333;
     text-decoration: none;
 }
 
 
-
 .icon_teste{
     opacity: 0.5;
+    color: #333333;
+    
 
 }
 

@@ -1,6 +1,7 @@
 import Input from "./Input"
 import styles from './Login.module.css'
 import { MdEmail, MdVpnKey} from "react-icons/md";
+import Logo from './img/Logo.png'
 
 function Login() {
   return (
@@ -10,6 +11,7 @@ function Login() {
       <div className={styles.superdiv}>
 
         <section className={styles.login_section}>
+        <img src={Logo}/>
           <h1>Projeto Dashboard
             de Monitoriamento
             Ambiental</h1>
@@ -40,6 +42,8 @@ function Login() {
             placeholder="senha"
 
           />
+
+          <p>Equeceu sua Senha ?</p>
 
 
    
