@@ -5,8 +5,10 @@ services:
     container_name: nodejs
     ports:
       - "8080:8080"
+      - "3000:3000"
     volumes:
-      - .:/usr/app/
+      - .:/usr/app
       - /usr/app/node_modules
-    command: npm run dev
+
+    command: "npm start"
 
