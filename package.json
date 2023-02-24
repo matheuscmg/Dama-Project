@@ -1,5 +1,5 @@
 {
-  "name": "frontend_npm",
+  "name": "react_project",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,12 +12,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "server":"nodemon index.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "dev": "concurrently \"npm run server \" \"npm run react\" "
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -36,8 +34,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.20"
   }
 }
