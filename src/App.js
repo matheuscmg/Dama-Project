@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-
+import api from "./requests/api";
 import "./styles.css";
 
 function App() {
@@ -26,9 +26,10 @@ function App() {
   };
 
   const handleSubmit = (event) => {
+    console.log('Tamo na área');
     //Prevent page reload
     event.preventDefault();
-
+    
     var { uname, pass } = document.forms[0];
 
     // Find user login info
@@ -40,6 +41,15 @@ function App() {
         // Invalid password
         setErrorMessages({ name: "pass", message: errors.pass });
       } else {
+
+        api.post('/rota', {
+          email:'randerson',
+        }).then((response)=>{
+          console.log(response)          
+        }).catch((error)=>{
+          console.log(error)
+        }
+        ) //DOCUMENTAÇÃO
         setIsSubmitted(true);
       }
     } else {
@@ -69,12 +79,13 @@ function App() {
           {renderErrorMessage("pass")}
         </div>
         <div className="button-container">
-          <input type="submit" />
+          <input type="submit" value="Submit"  />
+          <input type="submit" value='Register'/>
         </div>
       </form>
     </div>
   );
-
+  
   return (
     <div className="app">
       <div className="login-form">
