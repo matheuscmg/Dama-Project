@@ -28,7 +28,7 @@ function App() {
   const handleSubmit = (event) => {
     //Prevent page reload
     event.preventDefault();
-    console.log(event)
+    console.log('Submit')
     // setErrorMessages({ name: "email", message: '' });
     // setErrorMessages({ name: "password", message: '' });
 
@@ -61,6 +61,10 @@ function App() {
     // }
   };
 
+  function register() {
+    console.log('__Register')
+  }
+
   // Generate JSX code for error message
   const renderErrorMessage = (name) =>
     name === errorMessages.name && (
@@ -73,7 +77,7 @@ function App() {
       <form onSubmit={handleSubmit}>
         <div className="input-container">
           <label>Email </label>
-          <input type="text" name="email" required />
+          <input type="email" name="email" required />
           {renderErrorMessage("email")}
         </div>
         <div className="input-container">
@@ -83,7 +87,8 @@ function App() {
         </div>
         <div className="button-container">
           <input name='login' type="submit" value="Login"  />
-          <input name='register' type="submit" value='Register'/>
+          <button className="register-button" onClick={register}>Register</button>
+
         </div>
       </form>
     </div>
