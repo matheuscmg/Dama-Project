@@ -8,18 +8,6 @@ function App() {
   const [errorMessages, setErrorMessages] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  // User Login info
-  const database = [
-    {
-      email: "joao@email.com",
-      password: "joao"
-    },
-    {
-      email: "cesar@email.com",
-      password: "cesar"
-    }
-  ];
-
   const errors = {
     email: "invalid email",
     password:  "invalid password"
@@ -27,8 +15,21 @@ function App() {
 
   const handleSubmit = (event) => {
     //Prevent page reload
-    event.preventDefault();
-    console.log('Submit')
+    event.preventDefault()
+    var email = document.querySelector('input#email').value
+    var password = document.querySelector('input#password').value
+    console.log(`${email}${password}`)
+
+    api.post('/login', {
+      email : email,
+      password : password,
+    }).then(
+      (response) => { console.log(response) }
+    ).catch(
+      (error) => { console.log(error) }
+    )
+
+
     // setErrorMessages({ name: "email", message: '' });
     // setErrorMessages({ name: "password", message: '' });
 
@@ -60,9 +61,8 @@ function App() {
     //   setErrorMessages({ name: "email", message: errors.email });
     // }
   };
-
   function register() {
-    console.log('__Register')
+    console.log('Register')
   }
 
   // Generate JSX code for error message
@@ -74,26 +74,36 @@ function App() {
   // JSX code for login form
   const renderForm = (
     <div className="form">
-      <form onSubmit={handleSubmit}>
+      <form encType="" onSubmit={handleSubmit}>
         <div className="input-container">
           <label>Email </label>
-          <input type="email" name="email" required />
+          <input   
+            id='email'         
+            type="email" 
+            name="email" 
+            required 
+          />
           {renderErrorMessage("email")}
         </div>
         <div className="input-container">
           <label>Password </label>
-          <input type="password" name="password" required />
+          <input 
+            id='password'
+            type="password" 
+            name="password" 
+            required 
+          />
           {renderErrorMessage("password")}
         </div>
         <div className="button-container">
           <input name='login' type="submit" value="Login"  />
-          <button className="register-button" onClick={register}>Register</button>
-
+          {/* <button className="register-button" onClick={register}>Register</button> */}
         </div>
       </form>
     </div>
   );
-  
+
+
   return (
     <div className="app">
       <div className="login-form">
