@@ -8,15 +8,15 @@ axios.defaults.withCredentials = true;
 
 
 function App() {
+  const [name, setName] = useState('');
   const [isLogged, setIsLogged] = useState(false);
-  const [token, setToken] = useState('');
-  const [message, setMessage] = useState('');
+  const [isRegistered, setIsRegistered] = useState(false);
 
-  const handleSubmit = (event) => {
+  const handleLogin = (event) => {
     //Prevent page reload
     event.preventDefault()
-    var email = document.querySelector('input#email').value
-    var password = document.querySelector('input#password').value
+    var email = document.querySelector('input#login-email').value
+    var password = document.querySelector('input#login-password').value
  
     console.log(`email: ${email}\npassword: ${password}`)
 
@@ -26,9 +26,16 @@ function App() {
         axios.post('http://localhost/api/login', { email : email, password : password,}
         ).then(
           (response) => {
-            setToken(response.data.token)
-            setMessage(response.data.message)
-            setIsLogged(true) 
+            axios.get('http://localhost/api/me'
+            ).then(
+              (response) => {
+                console.log(response)
+                setName(response.data.name)
+                setIsLogged(true) 
+              }
+            ).catch(
+              (error) => { console.log(error) }
+            )
           }
         ).catch(
           (error) => { console.log(error) }
@@ -37,33 +44,73 @@ function App() {
     ).catch(
       (error) => { console.log(error) }
     )
+  }
 
+  const handleRegister = (event) => {
+    //Prevent page reload
+    // event.preventDefault()
+    // var email = document.querySelector('input#email').value
+    // var password = document.querySelector('input#password').value
+ 
+    // console.log(`email: ${email}\npassword: ${password}`)
+
+    // axios.get('http://localhost/sanctum/csrf-cookie'
+    // ).then(
+    //   (response) => {
+    //     axios.post('http://localhost/api/login', { email : email, password : password,}
+    //     ).then(
+    //       (response) => {
+    //         // setToken(response.data.token)
+    //         // setMessage(response.data.message)
+    //         // setIsLogged(true) 
+    //         console.log(response)
+    //       }
+    //     ).catch(
+    //       (error) => { console.log(error) }
+    //     )
+    //   }
+    // ).catch(
+    //   (error) => { console.log(error) }
+    // )
+    console.log('Register')
   }
   
    // JSX code for login form
   const renderForm = (
     <div className="form">
-      <form onSubmit={handleSubmit}>
-        <div className="input-container">
+
+      <form onSubmit={handleLogin}>        
+        <div className="input-container-login">
           <label>Email </label>
-          <input id='email' type='email' name='email' required />
-        </div>
-        <div className="input-container">
+          <input id='login-email' type='email' name='login-email' required />
           <label>Password </label>
-          <input id='password' type='password' name='password' required />
+          <input id='login-password' type='password' name='login-password' required />
         </div>
         <div className="button-container">
           <input name='login' type='submit' value='Login'  />
         </div>
       </form>
+
+      <form onSubmit={handleRegister}>
+        <div className="input-container-register">
+          <label>Email </label>
+          <input id='register-email' type='email' name='register-email' required />
+          <label>Password </label>
+          <input id='register-password' type='password' name='register-password' required />
+        </div>
+        <div className="button-container">
+          <input name='login' type='submit' value='Register'  />
+        </div>
+      </form>    
+
     </div>
   );
 
   return (
     <div className="app">
       <div className="login-form">
-        <div className="title">Sign In</div>
-        {isLogged ? <div>{message} with Token {token}</div>: renderForm}
+        <div className='title'> Welcome!!!</div>
+        {isLogged ? <div>{name}, make yourself comfortable...</div>: renderForm}
       </div>
     </div>
   );
