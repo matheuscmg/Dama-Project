@@ -2,7 +2,7 @@ version: "3.9"
 services:
   nodejs:
     build: .
-    container_name: nodejs
+    container_name: nodejs.ipesca
     ports:
       - "8080:8080"
       - "3000:3000"

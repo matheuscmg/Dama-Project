@@ -1,26 +1,31 @@
-import { useState } from 'react';
+import { useState } from 'react'
 import axios from 'axios';
-
+ 
 axios.defaults.withCredentials = true;
 
 const config = {
     headers:{
         'Content-Type': 'application/json',
-    }
+    },
 };
 
+function Login () {
 
-function Hello () {
-
-    const [greeting, setGretting] = useState();
+    const [message, setMessage] = useState();
 
     function listener () {
         // Make a request for a user with a given ID
-        axios.get('http://localhost/api/hello', config 
+        axios.get('http://localhost/sanctum/csrf-cookie', config 
         )        
         .then(function (response) {
             // handle success
-            setGretting(response.data['message'])
+            axios.get('http://localhost/api/login', config
+            )
+            .then(function (response) {
+                
+            })
+
+
         })
         .catch(function (error) {
             // handle error
@@ -31,15 +36,12 @@ function Hello () {
         });
     }
 
-    
+
     return (
-        <div>
-            { greeting 
-                ? (greeting)
-                : (<button onClick={listener}>Salve Galera</button>)
-            }       
-        </div>
-    )
+    <div>
+        <button onClick={listener}>Login {message}</button>
+    </div>
+    );
 }
 
-export default Hello
+export default Login

@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import "./styles.css";
 
 import Hello from './components/Hello'
+import Login from './components/Login'
 
 
 // axios.defaults.withCredentials = true;
@@ -119,6 +120,7 @@ function App() {
   return (
     <div className="app">
         <Hello></Hello>
+        <Login></Login>
     </div>
   );
 }
