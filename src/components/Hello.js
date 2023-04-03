@@ -1,43 +1,33 @@
 import { useState } from 'react';
-import axios from 'axios';
-
-axios.defaults.withCredentials = true;
-
-const config = {
-    headers:{
-        'Content-Type': 'application/json',
-    }
-};
-
+import axios from './axios/axiosLaravelConfig';
 
 function Hello () {
 
-    const [greeting, setGretting] = useState();
+    const [message, setMessage] = useState();
 
     function listener () {
-        // Make a request for a user with a given ID
-        axios.get('http://localhost/api/hello', config 
-        )        
-        .then(function (response) {
-            // handle success
-            setGretting(response.data['message'])
-        })
-        .catch(function (error) {
-            // handle error
-            console.log(error);
-        })
-        .finally(function () {
-            // always executed
-        });
+        axios.get('/hello').then(
+            function (response) {
+                console.log(response)
+                setMessage(response.data['message'])
+            }
+        ).catch(
+            function (error) {
+                console.log(error)
+            }
+        )
     }
 
+    function cleaner(){
+        setMessage('')
+    }
     
     return (
         <div>
-            { greeting 
-                ? (greeting)
-                : (<button onClick={listener}>Salve Galera</button>)
-            }       
+            <div>
+                <button onClick={listener}>{message ? message : 'hi'}</button>
+                <button onClick={cleaner}>refresh</button>   
+            </div>
         </div>
     )
 }

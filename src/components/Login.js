@@ -1,47 +1,36 @@
 import { useState } from 'react'
-import axios from 'axios';
- 
-axios.defaults.withCredentials = true;
-
-const config = {
-    headers:{
-        'Content-Type': 'application/json',
-    },
-};
+import axios from './axios/axiosLaravelConfig'
 
 function Login () {
 
-    const [message, setMessage] = useState();
+    const [message, setMessage] = useState()
 
     function listener () {
-        // Make a request for a user with a given ID
-        axios.get('http://localhost/sanctum/csrf-cookie', config 
-        )        
-        .then(function (response) {
-            // handle success
-            axios.get('http://localhost/api/login', config
-            )
-            .then(function (response) {
-                
-            })
-
-
-        })
-        .catch(function (error) {
-            // handle error
-            console.log(error);
-        })
-        .finally(function () {
-            // always executed
-        });
+        axios.post('/login', {
+            email : 'randerson.lemos@gmail.com',
+            password : '12345678'
+        }).then( 
+            function (response) {
+                console.log(response)
+                setMessage(response.data['message'].toLowerCase())
+            }
+        ).catch(
+            function (error) {
+                console.log(error)
+            }
+        )
     }
 
+    function cleaner () {
+        setMessage()
+    }
 
     return (
-    <div>
-        <button onClick={listener}>Login {message}</button>
-    </div>
-    );
+        <div>
+            <button onClick={listener}>{message ? message : 'login'}</button>
+            <button onClick={cleaner}>refresh</button>   
+        </div>
+    )
 }
 
 export default Login
