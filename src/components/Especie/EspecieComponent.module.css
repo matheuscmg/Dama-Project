@@ -1,0 +1,171 @@
+.container {
+  width: 100%;
+  height: 100%;
+}
+.formContainer {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+  height: 90%;
+}
+.formContainer p {
+  width: 85%;
+  padding: 0 5px;
+  color: #343a40;
+  font-weight: 500;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  width: 92%;
+  height: 100%;
+  max-height: 650px;
+}
+.search {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+  height: 40%;
+}
+
+.ipt {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 35%;
+}
+
+.ipt p {
+  margin-bottom: 2px;
+}
+
+.ipt select {
+  width: 100%;
+  height: 50%;
+  padding: 0 0 0 8px;
+  border-radius: 10px;
+  color: #ff491f;
+  font-size: 1rem;
+  border: 1px solid #3333334b;
+  font-weight: 500;
+  background-color: #fff;
+  outline: none;
+}
+
+.ipt select:focus {
+  border-radius: 10px 10px 0 0;
+}
+
+.ipt option {
+  color: #ff491f;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: #fff;
+  outline: none;
+  margin-left: 8px;
+  padding: 10px 5px;
+}
+.ipt input {
+  width: 99%;
+  height: 50%;
+  border-radius: 10px;
+  padding: 0 0 0 7px;
+  color: #ff491f;
+  font-size: 1rem;
+  border: 1px solid #3333334b;
+  font-weight: 500;
+  background-color: #fff;
+  outline: none;
+}
+
+.ipt input:focus {
+  border: 1px solid #ff491f;
+  caret-color: #ff491f;
+  outline: none;
+}
+
+.btnGroup {
+  margin-top: 10px;
+  width: 100%;
+  height: 10%;
+}
+.btnGroupCadastro {
+  width: 95%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+}
+
+.btnOpen {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.btnGroup button,
+.btnGroupCadastro button {
+  width: 47%;
+  height: 55%;
+  padding: 0 10px;
+  background-color: #ff491f;
+  font-size: 1rem;
+  color: #ffffff;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  caret-color: transparent;
+}
+
+.btnGroup button:hover,
+.btnGroupCadastro button:hover {
+  background-color: #e95d3d;
+}
+
+.listaEspecie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 92%;
+  height: 55%;
+  font-weight: 500;
+}
+
+.loadingFull {
+  width: 90%;
+  height: 10%;
+}
+
+.loadingText {
+  display: inline-block;
+  font-size: 1.5rem;
+  position: relative;
+}
+.loadingText::after {
+  content: " ..."; /* Os três pontos após o texto */
+  animation: dots 1.5s infinite steps(3); /* Duração e tipo de animação */
+  color: #ff491f;
+}
+
+@keyframes dots {
+  0%,
+  100% {
+    content: "";
+  }
+  33% {
+    content: ".";
+  }
+  66% {
+    content: "..";
+  }
+  99% {
+    content: "...";
+  }
+}

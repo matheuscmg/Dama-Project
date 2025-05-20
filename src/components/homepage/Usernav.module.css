@@ -1,0 +1,92 @@
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-width: 790px;
+  max-height: 6vh;
+  min-height: 45px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0 0.1875rem 0.1875rem 0 rgba(14, 34, 56, .07);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  height: 100%;
+  width: 97%;
+}
+
+.nav p {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.pageBack {
+  min-width: 10%;
+  max-width: 5vw;
+  font-size: 1.1rem;
+  cursor: pointer;
+
+}
+
+.pageBack p {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color:#ff491f;
+}
+
+.userData {
+  width: 140px;
+  height: 95%;
+  padding: 0 10px;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.userData p {
+  font-weight: 500;
+  width: 75%;
+}
+
+.userData span {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #391497;
+  text-transform: capitalize;
+  overflow: hidden;
+  width: 90%;
+}
+
+.avatar {
+  /*background-color: whitesmoke;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(245, 249, 252, 1);
+  background-color: #fff;
+  border: 2px solid #33333381;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.avatar img {
+  height: 80%;
+  width: 80%;
+}
+
+.avatarRole {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 220px;
+}

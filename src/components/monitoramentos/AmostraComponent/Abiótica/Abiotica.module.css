@@ -1,0 +1,163 @@
+.container {
+  width: 100;
+  height: 100%;
+}
+.formContainer {
+  display: flex;
+  width: 90%;
+  height: 90%;
+  max-height: 750px;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+/*
+  .formContainer input {
+    outline: none;
+    border: 2px solid #ff5c38;
+    font-weight: 600;
+    color: #333333;
+  }*/
+/*
+  .formContainer input:focus {
+    outline: none;
+    border: 2px solid #ff5c38;
+    font-weight: 600;
+    color: #333333;
+  }
+  */
+.formContainer p {
+  width: 85%;
+  padding: 0 5px;
+  color: #343a40;
+  font-weight: 500;
+}
+.formContainer h2 {
+  margin-bottom: 5px;
+  width: 90%;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #ff491f;
+  text-align: center;
+}
+.formGroup {
+  width: 100%;
+  height: 30%;
+}
+.group {
+  display: flex;
+  width: 100%;
+  height: 45%;
+  justify-content: space-between;
+}
+
+.ipt {
+  display: flex;
+  flex-direction: column;
+  width: 47%;
+  height: 100%;
+}
+.ipt input {
+  width: 90%;
+  height: 50%;
+  padding: 0 14px;
+  border-radius: 10px;
+  border: 1px solid #3333336e;
+}
+.ipt input:hover {
+  border: 1px solid #ff491f;
+}
+
+.ipt input:focus {
+  border: 1px solid #ff491f;
+  caret-color: #ff491f;
+  outline: none;
+}
+.inputColor {
+  color: #ff491f;
+  font-weight: 700;
+  cursor: default;
+}
+
+.detail {
+  width: 100%;
+  height: 60%;
+}
+
+.detailRow {
+  display: flex;
+  gap: 25px;
+}
+.detailItem {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+}
+.detailItem input {
+  width: 90%;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #3333336e;
+  padding: 0 10px;
+}
+.detailItem input:hover {
+  border: 1px solid #ff491f;
+}
+
+.detailItem input:focus {
+  border: 1px solid #ff491f;
+  caret-color: #ff491f;
+  outline: none;
+}
+.detailItem p {
+  padding: 2px 0;
+}
+
+.btnGroup {
+  width: 100%;
+  height: 10%;
+}
+
+.btnGroup button {
+  width: 47%;
+  height: 70%;
+  padding: 0 10px;
+  background-color: #ff491f;
+  font-size: 1rem;
+  color: #ffffff;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  caret-color: transparent;
+}
+
+.btnGroup button:hover {
+  background-color: #ff5c38;
+}
+
+.btnOpen {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.btnOpen h1 {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  font-size:2.7rem;
+  width: 100%;
+  height: 90%;
+  cursor: pointer;
+}
+
+.btnOpen h1:hover{
+  
+}
+
+
+.formContainer span {
+  color: #ff491f;
+  font-weight: 700;
+  cursor: pointer;
+}

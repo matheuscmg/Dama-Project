@@ -1,0 +1,236 @@
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Noto Sans', sans-serif;
+
+}
+
+
+.logoGrad {
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(270deg, #4719bc 0%, #c1b8d8 60%);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.CadastroIlustration {
+  height: 60%;
+  width:70%;
+  background-image: url('../../assets/login-ilust.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  background-color: #fff;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.damaLogo {
+  width: 15em;
+  height: 3.5em;
+  background-image: url('../../assets/logo_DAMA__cor-original\ .png');
+  background-size: cover;
+  background-position: center top;
+}
+
+.textContainer {
+  max-width: 400px;
+  width: 100%;
+  text-align: start;
+  text-align: center;
+}
+
+.textContainer h1 {
+  color: #333333;
+  font-size: 1.6rem;
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.formControl {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 45%;
+  max-width: 500px;
+  width: 100%;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-bottom: 1.5em;
+  height: 30%;
+  width: 80%;
+  margin: 0;
+  text-align: center;
+  position: relative;
+}
+
+.formGroup input {
+  width: 77%;
+  height: 50%;
+  border-radius: 0.8rem;
+  padding: 4px 45px;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  outline: none;
+  caret-color: #FF7300;
+  color: #343a40;
+  font-style: normal;
+  font-weight: 400;
+  font-family: Lato, sans-serif;
+  cursor: pointer;
+
+}
+
+.formGroup input:focus {
+  border: solid 1px #FF7300;
+  font-weight: 500;
+}
+
+.iconEnd {
+  position: absolute;
+  top: 35%;
+  right: 7%;
+  font-size: 1.3rem;
+  color: #333333b2;
+
+}
+
+.iconStart {
+  position: absolute;
+  background-color: transparent;
+  top: 35%;
+  left: 3%;
+  font-size: 1.3rem;
+  color: #333333b2;
+}
+
+.errorIcon {
+  color: rgb(245, 60, 60);
+  font-size: 1.3rem;
+}
+
+.error {
+  display: flex;
+
+}
+
+.error p {
+  color: rgb(245, 60, 60);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+
+.btnContainer {
+  width: 100%;
+  height: 30;
+}
+
+.btnGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 80%;
+  height: 30%;
+
+}
+
+form .btnEnter {
+  background: #391497;
+  ;
+  outline: none;
+  color: #FFFFFF;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 0.8rem;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
+  width: 95%;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.btnEnter:hover {
+  background: #60489c;
+  ;
+}
+
+
+.formgroup input::placeholder {
+  color: #333333d2;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.noFind {
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+}
+
+.enterHref {
+  width: 1px;
+  height: 100%;
+  background-color: #bbbfc4;
+}
+
+.noFind a {
+  color: #ff491f;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.noFind p {
+
+  color: #343a40;
+}
+
+@media (max-width: 875px) {
+
+  .logoGrad {
+    width: 0%;
+    height: 0%;
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .formContainer{
+
+    width: 75%;
+  }
+  .noFind{
+    width: 70%;
+  }
+  .iconEnd{
+    left: 94%;
+  }
+  }

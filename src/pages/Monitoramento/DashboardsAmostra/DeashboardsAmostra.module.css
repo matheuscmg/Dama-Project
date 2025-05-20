@@ -1,0 +1,88 @@
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(245, 249, 252, 1);
+  caret-color: transparent;
+}
+
+.navscreen-nav{
+    background-color: #FF491F;
+}
+
+.containerinfo {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.textContainer {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  height: 50%;
+  padding: 0 20px;
+  margin-left: 20px;
+  animation: moveLeft 1s ease-in-out;
+}
+
+@keyframes moveLeft {
+  0% {
+      transform: translateX(60%);
+      opacity: 0;
+  }
+
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+.headerGraph{
+  display: flex;
+  flex-direction: column;
+  width:100%;
+  height: 90%;  
+}
+
+.headerGraph p{
+  margin-top: 5px;
+color: #333;
+font-weight: 500;
+
+}
+
+  .sectionGraph{
+    width: 100%;
+    height: 100%;
+  }
+  .Deash1 , .Deash2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0.1875rem 0.1875rem 0.1875rem 0.1875rem rgba(14, 34, 56, .07);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+
+
+
+  .Deash1{
+    width: 45%;
+    height: 90%;
+    
+  }
+  .Deash2{
+    width: 30%;
+    height: 90%;
+  }
+
+  .Deash1:hover, .Deash2:hover {
+    box-shadow: 0 8px 16px #39149748;
+  }

@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap');
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f2f2f2;
+  
+  caret-color: transparent;
+}
+
+.containerinfo {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.textContainer {
+  display: flex;
+  margin-top: 30px;
+  justify-content: start;
+  width: 100%;
+  height: 90%;
+  min-width: 750px;
+  animation: moveLeft 1s ease-in-out;
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(60%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.header {
+  width: 100%;
+  height: 30%;
+}
+
+.projectContainer {
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: #fff;
+  min-width: 650px;
+  max-height: 700px;
+  width: 80%;
+  height: 88%;
+  padding: 0 20px;
+  margin-left: 20px;
+  box-shadow: 0.1875rem 0.1875rem 0.1875rem 0.1875rem rgba(14, 34, 56, 0.07);
+}
+
+.containterProject {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  height: 95%;
+  max-height: 650px;
+  display: flex;
+ 
+  margin-top: 10px;
+}
+
+
+.busca {
+  height: 35px;
+  display: flex;
+  width: 95%;
+  justify-content: center;
+  align-items: center;
+}
+
+.busca input {
+  width: 85%;
+  height:85%;
+  border-top: 1px solid #ff481f93;
+  border-bottom: 1px solid #ff481f93;
+  border-left: 1px solid #ff481f93;
+  padding: 0 10px;
+  background-color: #f7efeeb9;
+  outline: none;
+  caret-color: #333;
+  border-radius: 10px 0 0 10px;
+}
+
+.busca input::placeholder {
+  font-weight: 700;
+  color: #333;
+}
+
+.iconBuscar {
+  color: #6c757d;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 0 10px 10px 0;
+  border-top: 1px solid #ff481f93;
+  border-bottom: 1px solid #ff481f93;
+  border-right: 1px solid #ff481f93;
+  height: 85%;
+  padding: 0 4px;
+  width: 22px;
+  cursor: pointer;
+  caret-color: transparent;
+}
+.listaProjetos {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 98%;
+  height: 80%;
+  padding: 5px 10px;
+  font-weight: 500;
+}
+.seusProjetos {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  width: 100%;
+  max-height: calc(100% - 10px);
+  height: 60%;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 85%;
+  padding: 5px 15px 5px 5px;
+  color: #ff491f;
+  font-size: 1rem;
+  text-transform: capitalize;
+  overflow: auto;
+}
+.abioticaTable {
+  background-color: yellowgreen;
+  width: 100%;
+  height: 100px;
+}
+
+.seusProjetosAbiotica {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  width: 100%;
+  /* max-height: calc(100% - 10px);
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: scroll; */
+  height: 25%;
+  border-radius: 10px;
+  padding: 5px;
+  color: #fff;
+  font-size: 1rem;
+  text-transform: capitalize;
+  overflow: auto;
+}
+
+.abioticaContainer {
+  width: 17%;
+  min-width: 150px;
+  height: 100%;
+  text-align: center;
+}
+.abioticaContainer p, .abioticaDelete p{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+
+.abioticaContainer img{
+  width:25%;
+  height: 25%;
+  font-size:1.8rem;
+}
+
+.abioticaData {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+.abioticaData h1{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size:2rem;
+  text-align: start;
+  width:60%;
+  height: 100%;
+  text-transform: lowercase;
+  word-wrap: break-word;
+}
+
+.abioticaDelete{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  text-align: center;
+  height: 100%;
+  width: 7%;
+  min-width: 90px;
+}
+
+.abioticaAdd {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  height: 100%;
+  width: 7%;
+  min-width: 90px;
+}
+
+.addText {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+
+.abioticaDelete h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:2.7rem;
+  width: 100%;
+  height: 70%;
+}
+
+.abioticaDelete h1:hover,.abioticaDelete p:hover {
+  color: #b1a8ca;
+  cursor: pointer;
+}
+
+
+
+.tableContainer {
+  width: 100%;
+  max-height: calc(100% - 2px);
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.tableContainerAbiotica{
+  width: 100%;
+  height: 100%;
+  max-height: calc(100% - 10px);
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.stickyHeader {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.seusProjetos table ,.seusProjetosAbiotica table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.seusProjetos th,
+td ,.seusProjetosAbiotica th,
+td  {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: 500;
+}
+
+.seusProjetos td ,.seusProjetosAbiotica td {
+  max-width: 100px;
+}
+
+.seusProjetos th ,.seusProjetosAbiotica th  {
+  background-color: #ff491f;
+  color: #fff;
+  font-weight: bold;
+}
+
+.seusProjetos tr:nth-child(even) {
+  background-color: #f5f8fd;
+}
+
+.iconArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.icon {
+  font-size: 1.2rem;
+  font-weight: bold;
+  align-items: center;
+  background-color: #4bbf73;
+  color: #fff;
+  width: 25%;
+  border-radius: 0.2rem;
+  box-shadow: 0 0.05rem 0.2rem rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+.icon2 {
+  font-size: 1.2rem;
+  align-items: center;
+  background-color: #d9534f;
+  color: #fff;
+  width: 25%;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.btnOpen {
+  display: flex;
+  justify-content: space-around;
+  align-items: end;
+  width: 98%;
+  height: 10%;
+  
+}
+
+
+
+@media (max-width: 1150px) {
+
+  .abioticaDelete h1{
+    font-size: calc(2.7rem - 0.7vw);
+    height:60% ;
+  }
+  .abioticaDelete p{
+    width: 100%;
+    height: 40%;
+  }
+  
+  .abioticaData h1{
+    font-size: calc(2rem - 0.8vw);
+    height: 60%;
+    min-height: 40px;
+  }
+  
+  
+  .abioticaContainer img{
+    font-size: (1.8rem + 0.8vw);
+    height: 100%;
+    width: 40%;
+  }
+
+  .abioticaData{
+    height: 60%;
+    width: 100%;
+  }
+}

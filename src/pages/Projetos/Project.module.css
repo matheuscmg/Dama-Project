@@ -1,0 +1,231 @@
+/* Estilos gerais */
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(245, 249, 252, 1);
+}
+
+.containerinfo {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.textContainer {
+  display: flex;
+  margin-top: 30px;
+  justify-content: start;
+  width: 100%;
+  height: 90%;
+  min-width: 750px;
+  animation: moveLeft 1s ease-in-out;
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(60%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.header {
+  width: 100%;
+  height: 30%;
+}
+
+.btnOpen {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  width: 100%;
+  height: 10%;
+}
+
+/* Estilos para a lista de projetos */
+.projectContainer {
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: #fff;
+  min-width: 650px;
+  max-height: 700px;
+  width: 80%;
+  height: 85%;
+  padding: 0 20px;
+  margin-left: 20px;
+  box-shadow: 5px 5px 21px #d0d0d0, -5px -5px 21px #f0f0f0;
+}
+
+.containterProject {
+  width: 100%;
+  height: 95%;
+  max-height: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin-top: 10px;
+}
+
+.busca {
+  height: 7%;
+  display: flex;
+  width: 90%;
+  padding: 5px 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.busca input {
+  width: 85%;
+  height: 85%;
+  /*border: 2px solid #ff481f93;*/
+  border-top: 1px solid #33333323;
+  border-bottom: 1px solid #33333323;
+  border-left: 1px solid #33333323;
+  padding: 0 10px;
+  background-color: #fff;
+  outline: none;
+  caret-color: #333;
+  border-radius: 10px 0 0 10px;
+}
+
+.busca input::placeholder {
+  font-weight: 500;
+}
+
+.iconBuscar {
+  color: #6c757d;
+  font-size: 1.2rem;
+  font-weight: 700;
+  background-color: #fff;
+  border-radius: 0 10px 10px 0;
+  border-top: 1px solid #33333323;
+  border-bottom: 1px solid #33333323;
+  border-right: 1px solid #33333323;
+  height: 85%;
+  padding: 0 4px;
+  width: 22px;
+  cursor: pointer;
+  caret-color: transparent;
+}
+
+.listaProjetos {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 98%;
+  min-width: 650px;
+  height: 83%;
+  padding: 0 10px;
+  font-weight: 500;
+}
+
+.seusProjetos {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  width: 100%;
+  height: 100%;
+  max-height: calc(100% - 10px);
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 0 10px;
+  color: #ff491f;
+  font-size: 1rem;
+  text-transform: capitalize;
+  overflow: auto;
+}
+
+.tableContainer {
+  width: 100%;
+  height: 100%;
+  max-height: calc(100% - 10px);
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.stickyHeader {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.seusProjetos table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.seusProjetos th,
+td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: 500;
+}
+
+.seusProjetos td {
+  max-width: 100px;
+}
+
+.seusProjetos th {
+  background-color: #ff491f;
+  color: #fff;
+  font-weight: bold;
+}
+
+.seusProjetos tr:nth-child(even) {
+  background-color: #f5f8fd;
+}
+.iconArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.iconArea .icon {
+  font-size: 1.2rem;
+  font-weight: bold;
+  align-items: center;
+  margin-right: 10px;
+  background-color: #4bbf73;
+  color: #fff;
+  width: 15%;
+  border-radius: 5rem;
+  box-shadow: 0 0.05rem 0.2rem rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+.iconArea .icon:hover {
+  background-color: #3d9e5f;
+  color: #fff;
+}
+
+.icon2 {
+  font-size: 1.2rem;
+  background-color: #d9534f;
+  color: #fff;
+  width: 15%;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border-radius: 5rem;
+}
+
+.icon2:hover {
+  background-color: #973b38;
+  color: #fff;
+}

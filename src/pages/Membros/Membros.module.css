@@ -1,0 +1,200 @@
+/* Estilos gerais */
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(245, 249, 252, 1);
+
+}
+
+.containerinfo {
+  height:100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.textContainer {
+  display: flex;
+  margin-top: 30px;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  height: 90%;
+  min-width: 750px;
+  animation: moveLeft 1s ease-in-out;
+
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(60%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.header {
+  width: 100%;
+  height: 30%;
+}
+
+.btnOpen {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  height: 10%;
+}
+
+.btnOpen button {
+  background-color: #FF491F;
+  color: #fff;
+  width: 50px;
+  height: 100%;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+
+/* Estilos para a lista de projetos */
+.projectContainer {
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: #fff;
+  min-width: 650px;
+  max-height: 700px;
+  width: 80%;
+  height: 85%;
+  padding: 0 20px;
+  margin-left: 20px;
+  box-shadow:  5px 5px 21px #d0d0d0,
+  -5px -5px 21px #f0f0f0;
+  
+}
+
+.containterProject {
+  width: 100%;
+  height: 95%;
+  max-height: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin-top: 10px;
+}
+
+.busca {
+  display: flex;
+  height: 15%;
+  background-color: #391497;
+  border-radius: 10px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -40px;
+}
+.search{
+  display: flex;
+  width: 20%;
+  height: 50%;
+  margin-right: 10px;
+}
+.busca p{
+  margin-left: 10px;
+  width:auto;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.busca input {
+  width: 80%;
+  height: 100%;
+  /*border: 2px solid #ff481f93;*/
+  border-top: 1px solid #33333323;
+  border-bottom: 1px solid #33333323;
+  border-left: 1px solid #33333323;
+  padding: 0 10px;
+  background-color: #fff;
+  outline: none;
+  caret-color: #333;
+  border-radius: 10px 0 0 10px;
+}
+
+.busca input::placeholder {
+  font-weight: 500;
+}
+
+
+
+.seusProjetos {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  width: 98%;
+  min-width: 650px;
+  height: 80%;
+  max-height: calc(100% - 10px); 
+  margin-top: 15px;
+  overflow-x: hidden;
+  overflow-y: scroll; 
+  padding: 0 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  overflow: auto;  
+}
+
+.seusProjetos thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.seusProjetos table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.1); /* Sombra leve para a tabela inteira */
+  background-color: #fff; /* Fundo branco para a tabela */
+}
+
+.seusProjetos th
+{
+  background-color: #f2f2f2; /* Cor de fundo para o cabeçalho da tabela */
+  color: #333; /* Cor do texto para o cabeçalho da tabela */
+  font-weight: bold;
+  text-align: left; /* Alinhamento do texto para a esquerda */
+  padding: 12px 15px;
+}
+
+.seusProjetos td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+
+.seusProjetos th:first-child{
+  color: #FF491F;
+}
+.seusProjetos tbody tr td:first-child {
+  color: #FF491F; /* A cor que você escolher */
+}
+.seusProjetos tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+.seusProjetos tr:nth-child(even) {
+  background-color: #fff;
+}
+.seusProjetos tr:hover {
+  background-color: #f1f1f1;
+}
+.seusProjetos table {
+  border: none;
+}

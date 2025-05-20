@@ -1,0 +1,93 @@
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+.aside {
+    display: flex;
+    flex-direction: column;
+    background-color: #FF7300;
+    flex: 0.04;
+    justify-content: flex-end;
+
+}
+
+.aside .footer-aside{
+    height: 250px;
+    background-color: #ffdcbf;
+}
+
+.info-container {
+    background-color: whitesmoke;
+    width: 100%;
+    flex: 1;
+
+    display: flex;
+}
+
+.center{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    margin: 0 auto;
+
+    position: relative;
+
+    padding: 15px;
+}
+
+.img-voltar img{
+    width: 7px;
+    margin-right: 10px;
+}
+
+.center a{
+    position: absolute;
+
+    left: 0;
+    text-decoration: none;
+    margin-top: 35px;
+    margin-left: 45px;
+    font-weight: 700;
+    color: #FF7300;
+}
+
+.center .infos{
+    max-width: 800px;
+    height: auto;
+    
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+    align-items: center;
+}
+
+.center .infos h1{
+    font-weight: 700;
+    font-size: 48px;
+    color: #27AD7A;
+    margin-left: 30px;
+}
+
+.center .sucesso{
+    display: flex;
+}
+
+.center .sucesso img{
+    width: 85px;
+}
+
+.center .infos-adicionais{
+    width: 70.5%;
+    text-align: justify;
+}
+
+@media (max-width: 770px){
+    .aside{
+        display: none;
+    }
+}

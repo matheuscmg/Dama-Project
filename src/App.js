@@ -1,18 +1,13 @@
-import React, { useState } from "react";
-// import ReactDOM from "react-dom";
-// import axios from 'axios';
-import "./styles.css";
+import styles from './App.module.css';
+import { Routes, Route} from 'react-router-dom';
 
-import Hello from './components/Hello'
-import Login from './components/Login'
-
+import Landingpage from './pages/User/Landingpage';
 
 
 function App() {
   return (
-    <div className="app">
-        <Hello></Hello>
-        <Login></Login>
+    <div className={styles.container}>
+      <Landingpage/>
     </div>
   );
 }
